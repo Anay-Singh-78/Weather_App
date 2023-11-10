@@ -10,19 +10,6 @@ export const ContextProvider = ({children})=>{
     const [loader , setLoader] = useState(false);
     const API_KEY = "270a50d966196f485155d52ea8a0261f"
     const API_URL = "https://api.openweathermap.org/data/2.5/weather?"
-    // function checkauthorizedGeoLocation(){ 
-    //     if(typeof localStorage['authorizedGeoLocation'] === "undefined" || localStorage['authorizedGeoLocation'] === "0" ) 
-    //         setLocation(false);
-    //     else 
-    //         setLocation(true);
-    // }
-    // useEffect(()=>{
-    //     checkauthorizedGeoLocation()
-    //     if(typeof localStorage['authorizedGeoLocation'] === "undefined" || localStorage['authorizedGeoLocation'] === "0" ) 
-    //     setLocation(false)
-    //     else
-    //     onLocationFetch()
-    // },[])
     const onLocationFetch = () =>{
         if(navigator.geolocation){
             navigator.geolocation.getCurrentPosition(success , prblm);
